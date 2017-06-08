@@ -27,8 +27,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 
 add_executable(mutex_example src/mutex_example.cpp)
-
 target_link_libraries(mutex_example ${PTHREAD_LIBRARY})
+
+add_executable(atomic_example src/atomic_example.cpp)
+target_link_libraries(atomic_example ${PTHREAD_LIBRARY})
 
 file(GLOB_RECURSE ALL_SOURCE_FILES *.cpp *.h)
 add_custom_target(format
