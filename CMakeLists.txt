@@ -22,7 +22,7 @@ set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS
 find_library(PTHREAD_LIBRARY pthread)
 
 include_directories(include)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11) # 17 is not available in CMake 3.5 which comes in Ubuntu 16.04
 set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 
