@@ -1,2 +1,3 @@
 # cpp-multithreading
-Simple C++11/17 multithreading examples
+
+Simple C++11 and above multithreading examples
