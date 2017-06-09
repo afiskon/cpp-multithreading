@@ -1,8 +1,8 @@
 /* vim: set ai et ts=4 sw=4: */
 
+#include <atomic>
 #include <iostream>
 #include <mutex>
-#include <atomic>
 #include <thread>
 #include <vector>
 
