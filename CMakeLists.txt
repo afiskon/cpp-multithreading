@@ -29,6 +29,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 add_executable(mutex_example src/mutex_example.cpp)
 target_link_libraries(mutex_example ${PTHREAD_LIBRARY})
 
+add_executable(thread_local_example src/thread_local_example.cpp)
+target_link_libraries(thread_local_example ${PTHREAD_LIBRARY})
+
 add_executable(shared_mutex_example src/shared_mutex_example.cpp)
 target_link_libraries(shared_mutex_example ${PTHREAD_LIBRARY})
 
