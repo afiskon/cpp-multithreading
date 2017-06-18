@@ -29,7 +29,11 @@ void thread_proc(int tnum) {
 
 int main() {
     std::vector<std::thread> threads;
-    for(int i = 0; i < 10; i++) {
+
+    int nthreads = std::thread::hardware_concurrency();
+    if(nthreads == 0) nthreads = 2;
+
+    for(int i = 0; i < nthreads; i++) {
         std::thread thr(thread_proc, i);
         threads.emplace_back(std::move(thr));
     }
